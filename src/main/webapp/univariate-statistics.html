@@ -1,0 +1,108 @@
+<div style='display: none;' id='function_name' class="analysis-function-name"></div>
+
+<div class="subtitle analysis-timerange-subtitle">
+    <div class="subtitle-text" id="timerange_label">TIME RANGE</div>
+    <hr>
+</div>
+
+<div class="analysis-timerange-box">
+    <!-- Time frame -->
+    <div id='analysis_years'></div>
+</div>
+
+<!-- VARIABLES TABLE -->
+<div  id='univariate_statistics_table' class="univariate-box">
+
+
+    <div id='variables_label' class='analysis-title'>Variables</div>
+
+
+    <!-- Grids -->
+    <div class="analysis-grid-box">
+        <div class="analysis-grid">
+            <div id='groups_list'></div>
+        </div>
+        <div class="analysis-grid">
+            <div id='domains_list'></div>
+        </div>
+        <div class="analysis-grid">
+            <div id='countries_list'></div>
+            <input id='select_all_countries_button' class='select_all_button' value='All'>
+            <input id='deselect_all_countries_button' class='select_all_button' value='None'>
+        </div>
+        <div class="analysis-grid">
+            <div id='items_list'></div>
+            <input id='select_all_items_button' class='select_all_button' value='All'>
+            <input id='deselect_all_items_button' class='select_all_button' value='None'>
+        </div>
+        <div class="analysis-grid">
+            <div id='elements_list'></div>
+            <input id='select_all_elements_button' class='select_all_button' value='All'>
+            <input id='deselect_all_elements_button' class='select_all_button' value='None'>
+        </div>
+     </div>
+
+
+
+    <!-- Labels (e.g. 'Domain') -->
+    <div class="analysis-pivot-options">
+        <div class="analysis-selectors-big">
+            <div class='analysis-pivot-options-title'>PIVOT TABLE CONFIGURATION</div>
+        </div>
+        <div class="analysis-selectors-big">
+            <div id='cols_label' class='analysis-label'>Columns</div>
+            <div id='columns_list'  class="analysis-dropdown"></div>
+        </div>
+        <div class="analysis-selectors-big">
+            <div id='rows_label' class='analysis-label'>Rows</div>
+            <div id='rows_list'  class="analysis-dropdown"></div>
+        </div>
+        <div class="analysis-selectors-big">
+            <div id='sub_rows_label' class='analysis-label'>Sub-Rows</div>
+            <div id='sub_rows_list'  class="analysis-dropdown"></div>
+        </div>
+    </div>
+									
+</div>
+
+<br>
+
+<br>
+
+<div class="analysis-btns">
+
+    <a class='btn btn-analysis'  id='clear_selection_button'><div class="icon-circle-clear btnLeftIcon"></div>CLEAR SELECTION</a>
+
+    <a class='btn btn-analysis'  id='export_results_button' ><div class="icon-circle-export btnLeftIcon"></div>EXPORT RESULT</a>
+
+    <a class='btn btn-analysis' id='export_data_button' ><div class="icon-circle-export btnLeftIcon"></div>EXPORT INPUT DATA</a>
+
+    <a class='btn btn-analysis'  id='show_results_button'><div class="icon-circle-show btnLeftIcon"></div>SHOW RESULT</a>
+
+</div>
+
+<br>
+
+<!--<div id='result_area' style='width: 100%;'></div>-->
+
+<script>
+
+    document.getElementById('timerange_label').innerHTML = $.i18n.prop('_timerange');
+    document.getElementById('variables_label').innerHTML = $.i18n.prop('_variables');
+
+//    document.getElementById('compare_button_add').innerHTML = '<div class="icon-circle btnLeftIcon"></div>' + $.i18n.prop('_add_variable');
+//    $('#compare_button_add').addClass('btn btn-analysis-newvariable');
+
+    document.getElementById('clear_selection_button').innerHTML = '<div class="icon-circle-clearall btnLeftIcon"></div>' + $.i18n.prop('_clear_selection');
+    $('#clear_selection_button').addClass('btn btn-analysis');
+
+    document.getElementById('export_results_button').innerHTML = '<div class="icon-circle-export btnLeftIcon"></div>' + $.i18n.prop('_export_results');
+    $('#export_results_button').addClass('btn btn-analysis');
+
+    document.getElementById('export_data_button').innerHTML = '<div class="icon-circle-export btnLeftIcon"></div>' + $.i18n.prop('_export_data');
+    $('#export_data_button').addClass('btn btn-analysis');
+
+    document.getElementById('show_results_button').innerHTML = '<div class="icon-circle-show btnLeftIcon"></div>' + $.i18n.prop('_show_results');
+    $('#show_results_button').addClass('btn btn-analysis');
+
+</script>

@@ -1,0 +1,64 @@
+<div style='display: none;' id='function_name' class="analysis-function-name"></div>
+
+<div class="subtitle analysis-timerange-subtitle">
+    <div class="subtitle-text" id="timerange_label">TIME RANGE</div>
+    <hr>
+</div>
+
+<div class="analysis-timerange-box">
+    <!-- Time frame -->
+    <div id='analysis_years'></div>
+</div>
+
+<div id='dependent_variable' class="dependent-variable-box"></div>
+
+<div class="spacer-one"></div>
+
+<div class="subtitle">
+    <div class="subtitle-text" id="independent_variables_label"></div>
+    <a class="btn btn-analysis-newvariable" id="compare_button_add" onclick='ANALYSIS.addVariableAgent(1, false);'><div class="icon-circle btnLeftIcon"></div>ADD NEW VARIABLE</a>
+    <hr>
+</div>
+
+<br>
+<div id='linear_regression_table'></div>
+
+<br>
+
+<!-- BUTTONS DIV -->
+
+<div class="analysis-btns">
+
+    <a class='btn btn-analysis'  id='clear_selection_button'><div class="icon-circle-clearall btnLeftIcon"></div>NO LANGUAGE</a>
+
+    <a class='btn btn-analysis'  id='export_results_button' ><div class="icon-circle-export btnLeftIcon"></div>NO LANGUAGE</a>
+
+    <a class='btn btn-analysis' id='export_data_button' ><div class="icon-circle-export btnLeftIcon"></div>NO LANGUAGE</a>
+
+    <a class='btn btn-analysis'  id='show_results_button'><div class="icon-circle-show btnLeftIcon"></div>NO LANGUAGE</a>
+
+</div>
+
+<br>
+
+<script>
+
+    document.getElementById('timerange_label').innerHTML = $.i18n.prop('_timerange');
+    document.getElementById('independent_variables_label').innerHTML = $.i18n.prop('_independent_variables');
+
+    document.getElementById('compare_button_add').innerHTML = '<div class="icon-circle btnLeftIcon"></div>' + $.i18n.prop('_add_variable');
+    $('#compare_button_add').addClass('btn btn-analysis-newvariable');
+
+    document.getElementById('clear_selection_button').innerHTML = '<div class="icon-circle-clearall btnLeftIcon"></div>' + $.i18n.prop('_clear_selection');
+    $('#clear_selection_button').addClass('btn btn-analysis');
+
+    document.getElementById('export_results_button').innerHTML = '<div class="icon-circle-export btnLeftIcon"></div>' + $.i18n.prop('_export_results');
+    $('#export_results_button').addClass('btn btn-analysis');
+
+    document.getElementById('export_data_button').innerHTML = '<div class="icon-circle-export btnLeftIcon"></div>' + $.i18n.prop('_export_data');
+    $('#export_data_button').addClass('btn btn-analysis');
+
+    document.getElementById('show_results_button').innerHTML = '<div class="icon-circle-show btnLeftIcon"></div>' + $.i18n.prop('_show_results');
+    $('#show_results_button').addClass('btn btn-analysis');
+
+</script>

@@ -1,0 +1,6 @@
+{
+	"datasource": "faostatproddiss",
+	"baseurl": "fenixapps.fao.org",
+	"baseurl_bletchley": "fenixapps.fao.org",
+	"baseurl_r": "localhost:8080"
+}

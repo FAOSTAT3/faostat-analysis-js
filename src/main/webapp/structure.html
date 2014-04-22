@@ -1,0 +1,39 @@
+<div class="pageTitleCommands">
+    <h1>Analysis</h1>
+</div>
+<div id='main-content'>
+
+    <table style='width: 100%;'>
+
+	<tr>
+
+		<td valign='top' style='width: 200px;'>
+
+			<div id='tree'></div>
+
+		</td>
+
+		<td valign='top'>
+
+			<div id='content'></div>
+
+		</td>
+
+	</tr>
+
+    </table>
+
+     <!-- DO NOT DISPLAY FROM HERE BEFORE SELECTIONS -->
+    <div id='result-wrapper' style='display: none;'>
+        <div class="subtitle" id="compare_results">
+            <div class="subtitle-text" id="results_label"><script>document.getElementById('results_label').innerHTML = $.i18n.prop('_results');</script></div>
+            <hr>
+        </div>
+        <div id='result_area' class="result-content">
+            <div class="obj-box" id='result-box'>
+                No data to display - Please make another selection
+            </div>
+        </div>
+    </div>
+
+</div>

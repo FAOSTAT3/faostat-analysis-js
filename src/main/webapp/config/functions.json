@@ -1,0 +1,71 @@
+{
+	"G1" : {
+		"E_label" : "Linear Regression",
+		"F_label" : "R&eacute;gression Lin&eacute;aire",
+		"S_label" : "Regresi&ograve;n Lineal",
+		"functions" : {
+			"lm" : {
+				"E_label" : "Linear Regression",
+				"F_label" : "R&eacute;gression Lin&eacute;aire",
+				"S_label" : "Regresi&ograve;n Lineal"
+			},
+			"cor" : {
+				"E_label" : "Correlation Matrix",
+				"F_label" : "Matrice de Corr&eacute;lation",
+				"S_label" : "Matriz de Correlaci&ograve;n"
+			},
+			"cov" : {
+				"E_label" : "Covariance Matrix",
+				"F_label" : "Matrice de Covariance",
+				"S_label" : "Matriz de Covarianza"
+			}
+		}
+	},
+	"G2" : {
+		"E_label" : "Univariate Statistics",
+		"F_label" : "Statistiques Univari&eacute;es",
+		"S_label" : "Estad&igrave;sticas Univariadas",
+		"functions" : {
+			"max" : {
+				"E_label" : "Maximum",
+				"F_label" : "Maximum",
+				"S_label" : "M&agrave;ximo"
+			},
+			"mean" : {
+				"E_label" : "Mean",
+				"F_label" : "Moyenne",
+				"S_label" : "Promedio"
+			},
+			"median" : {
+				"E_label" : "Median",
+				"F_label" : "M&eacute;diane",
+				"S_label" : "Mediana"
+			},
+			"min" : {
+				"E_label" : "Minimum",
+				"F_label" : "Minimum",
+				"S_label" : "M&igrave;nimo"
+			},
+			"quantile" : {
+				"E_label" : "Quantiles",
+				"F_label" : "Quantiles",
+				"S_label" : "Cuantiles"
+			},
+			"sd" : {
+				"E_label" : "Standard Deviation",
+				"F_label" : "&Eacute;cart type",
+				"S_label" : "Desviaci&ograve;n Est&agrave;ndar"
+			},
+			"summary" : {
+				"E_label" : "Summary",
+				"F_label" : "R&eacute;sum&eacute;",
+				"S_label" : "Resumen"
+			},
+			"var" : {
+				"E_label" : "Variance",
+				"F_label" : "Variance",
+				"S_label" : "Varianza"
+			}
+		}
+	}
+}
