@@ -12,7 +12,7 @@ if (!window.ANALYSIS) {
          It can't be stored in the JSON configuration file because it is
          used to locate the JSON configuration file.
          */
-        prefix : 'http://localhost:8080/faostat-analysis-js/',
+        prefix : 'http://168.202.28.214:8080/faostat-analysis-js/',
 		
 		/**
 		 * e.g. 'G1' (Linear Regression)
@@ -80,35 +80,38 @@ if (!window.ANALYSIS) {
                 var settings = data;
                 if (typeof data == 'string')
                     settings = $.parseJSON(data);
+
                 ANALYSIS.datasource = settings.datasource;
                 ANALYSIS.baseurl = settings.baseurl;
                 ANALYSIS.baseurl_bletchley = settings.baseurl_bletchley;
                 ANALYSIS.baseurl_r = settings.baseurl_r;
+                ANALYSIS.I18N_URL = settings.I18N_URL;
+
+                /**
+                 * Initiate multi-language
+                 */
+                var I18NLang = '';
+                switch (ANALYSIS.lang) {
+                    case 'F' : I18NLang = 'fr'; break;
+                    case 'S' : I18NLang = 'es'; break;
+                    default: I18NLang = 'en'; break;
+                }
+               /* $.i18n.properties({
+                    name: 'I18N',
+                    path: ANALYSIS.I18N_URL,
+                    mode: 'both',
+                    language: I18NLang,
+                    callback: function() {
+                        $('#container').load(ANALYSIS.prefix + 'structure.html', function() {
+                            ANALYSIS.initStructure();
+                        });
+                    }
+                });*/
+
+                $('#container').load(ANALYSIS.prefix + 'structure.html', function() {
+                    ANALYSIS.initStructure();
+                });
             });
-			
-			/**
-			 * Initiate multi-language
-			 */
-			var I18NLang = '';
-			switch (ANALYSIS.lang) {
-				case 'F' : I18NLang = 'fr'; break;
-				case 'S' : I18NLang = 'es'; break;
-				default: I18NLang = 'en'; break;
-			}
-			$.i18n.properties({
-				name: 'I18N',
-				path: ANALYSIS.prefix + 'I18N/',
-				mode: 'both',
-				language: I18NLang
-			});
-			
-			/**
-			 * Load the structure in the 'container' DIV
-			 */
-			$('#container').load(ANALYSIS.prefix + 'structure.html', function() {
-				ANALYSIS.initStructure();
-			});
-			
 		},
 		
 		/**
@@ -1073,7 +1076,6 @@ if (!window.ANALYSIS) {
 					$('#item_label_x').attr('id', 'item_label_' + nextIDX);
 					$('#element_label_x').attr('id', 'element_label_' + nextIDX);
 					$('#which_is_your_independent_variable_label_x').attr('id', 'which_is_your_independent_variable_label_' + nextIDX);
-					console.log(nextIDX);
                     document.getElementById('independent_variable_' + nextIDX).innerHTML = $.i18n.prop('_independent_variable') + '<div class="variable-number">' + nextIDX + '</div>';
 					document.getElementById('group_label_' + nextIDX).innerHTML = $.i18n.prop('_group');
 					document.getElementById('domain_label_' + nextIDX).innerHTML = $.i18n.prop('_domain');
@@ -1142,10 +1144,6 @@ if (!window.ANALYSIS) {
 			if (groupCode != null)
 				url = 'http://' + ANALYSIS.baseurl  + '/wds/rest/' + code + '/' + ANALYSIS.datasource + '/' + groupCode + '/' + ANALYSIS.lang;
 
-            console.log(url);
-            console.log(code);
-            console.log(groupCode);
-			
 			$.ajax({
 				
 				type: 'GET',
