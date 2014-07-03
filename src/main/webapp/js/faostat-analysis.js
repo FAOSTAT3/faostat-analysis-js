@@ -69,9 +69,6 @@ if (!window.ANALYSIS) {
 			if (lang != null && lang.length > 0) {
 				ANALYSIS.lang = lang;
 			}
-			var tmp = $.url().param('lang');
-			if (tmp != null && tmp.length > 0)
-				ANALYSIS.lang = tmp;
 			
 			/**
 			 * Read and store settings for web-services
